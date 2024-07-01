@@ -1,6 +1,6 @@
 <script>
 import axios from 'axios';
-import ProjectCard from './ProjectCard.vue'
+import ProjectCard from '../ProjectCard.vue'
 
 export default {
     components: {
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <template>
-    <h1>ciao</h1>
+    <h1 class="text-center py-4">Projects</h1>
 
     <div class="container">
         <div class="row">
@@ -36,6 +36,6 @@ export default {
 
 <style scoped lang="scss">
 .col-3 > * {
-    aspect-ratio: 1;
+    aspect-ratio: 0.5;
 }
 </style>
