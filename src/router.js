@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import AppMain from './components/pages/AppMain.vue';
 import AppHome from './components/pages/AppHome.vue';
+import AppDetail from './components/pages/AppDetail.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -15,6 +16,11 @@ const router = createRouter({
             name: 'projects',
             component: AppMain,
         },
+        {
+            path: '/project/:slug',
+            name: 'show-project',
+            component: AppDetail,
+        }
     ]
 });
 

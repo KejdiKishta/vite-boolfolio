@@ -13,7 +13,7 @@ export default {
         }
     },
     created() {
-        axios.get("http://127.0.0.1:8000/api/test").then((resp) => {
+        axios.get("http://127.0.0.1:8000/api/projects").then((resp) => {
             // salvo i dati nella varibile iniziale
             this.projects = resp.data.projects;
             // console.log(this.projects);
@@ -28,7 +28,9 @@ export default {
     <div class="container">
         <div class="row">
             <div class="col-3" v-for="project in projects" :key="project.id">
-                <ProjectCard :project="project" />
+                <router-link class="text-decoration-none" :to="{ name:'show-project', params:{ slug: project.slug }}">
+                    <ProjectCard :project="project" />
+                </router-link>
             </div>
         </div>
     </div>
